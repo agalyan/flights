@@ -4,7 +4,7 @@ import FlightDirection from './FlightDirection';
 
 const FlightDirections = () => {
   return (
-    <div>
+    <div className='flex flex-col h-full justify-between'>
       <FlightDirection icon={faPlaneDeparture} text='Departure' direction='flyFrom' />
       <FlightDirection icon={faPlaneArrival} text='Arrival' direction='to' />
     </div>

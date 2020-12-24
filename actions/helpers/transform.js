@@ -1,5 +1,5 @@
 export function makeRequestQuery(query) {
-    let strQuery = `?partner=picky&v=3`;
+    let strQuery = `?partner=picky&v=3&sort=date`;
     
     // Append filters to query
     for (let field in query) {

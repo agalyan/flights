@@ -10,7 +10,7 @@ const Search = () => {
   return (
     <div className=''>
       <button 
-      className='p-4 w-full bg-yellow-400 hover:bg-yellow-300 text-white focus:outline-none text-lg'
+      className='w-full'
       onClick={doSearch}
       >
         {'Search Flights'}
