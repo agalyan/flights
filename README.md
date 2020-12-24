@@ -2,6 +2,7 @@
 
 This is a test project to explore flights using kiwi.com free API
 
+DEMO 👉 https://flights.vercel.app
 
 # Getting Started
 
@@ -33,3 +34,14 @@ npm run dev
 ```
 
 It should now be up and running at http://localhost:3000 🚀
+
+# Deployment
+
+Vercel platform is used for the deployement:
+REF 👉 https://nextjs.org/docs/deployment
+
+
+## Public access
+
+The application is accessible publicly by the following url:
+https://flights.vercel.app

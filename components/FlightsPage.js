@@ -5,11 +5,9 @@ import Header from './Header/Header';
 const FlightsPage = () => {
 
   return (
-    <div className='p-3 md:p-10'>
+    <div className='p-3 md:p-10 flex-col h-full '>
       <Header />
-      <div className='md:flex justify-between md:space-x-6'>
-        <Flights />
-      </div>
+      <Flights />
     </div>
   )
 }

@@ -4,7 +4,7 @@ import initialState from './initialState';
 export function flights(state = initialState.flights, action) {
   switch (action.type) {
     case types.SUCCESS_FLIGHTS:
-      return action.data.flights;
+      return action.flights;
     default:
       return state;
   }

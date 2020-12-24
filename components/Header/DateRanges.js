@@ -1,7 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import DatePicker from "react-datepicker";
 import moment from 'moment';
 import { alterQuery } from '../../actions/queryActions';
@@ -13,7 +11,7 @@ const DateRanges = () => {
 
   const startInitial = new Date();
   const [dateFrom, setDateFrom] = useState(startInitial);
-  const [dateTo, setDateTo] = useState(moment(startInitial).endOf('day').toDate());
+  const [dateTo, setDateTo] = useState( moment(startInitial).add(1, "days").toDate() );
 
   useEffect(() => {
     dispatch(alterQuery({field: 'dateFrom', value: moment(dateFrom).format('DD/MM/YYYY')}));
