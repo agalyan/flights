@@ -25,7 +25,7 @@ const DateRanges = () => {
   const onChangeEnd = (date) => setDateTo(date);
 
   return (
-    <span>
+    <div className='flex p-4'>
       <span>From:</span>
       <span className='inline-block'>
         <DatePicker
@@ -41,7 +41,7 @@ const DateRanges = () => {
         />
       </span>
 
-    </span>
+    </div>
   )
 }
 
