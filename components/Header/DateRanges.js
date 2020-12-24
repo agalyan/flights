@@ -4,6 +4,7 @@ import DatePicker from "react-datepicker";
 import moment from 'moment';
 import { alterQuery } from '../../actions/queryActions';
 
+const rangeInputClasses = 'text-base p-2 text-center border-2 focus:border-yellow-400 focus:outline-none';
 
 const DateRanges = () => {
 
@@ -11,37 +12,38 @@ const DateRanges = () => {
 
   const startInitial = new Date();
   const [dateFrom, setDateFrom] = useState(startInitial);
-  const [dateTo, setDateTo] = useState( moment(startInitial).add(1, "days").toDate() );
+  const [dateTo, setDateTo] = useState(moment(startInitial).add(1, "days").toDate());
 
   useEffect(() => {
-    dispatch(alterQuery({field: 'dateFrom', value: moment(dateFrom).format('DD/MM/YYYY')}));
+    dispatch(alterQuery({ field: 'dateFrom', value: moment(dateFrom).format('DD/MM/YYYY') }));
   }, [dateFrom]);
 
   useEffect(() => {
-    dispatch(alterQuery({field: 'dateTo', value: moment(dateTo).format('DD/MM/YYYY')}));
+    dispatch(alterQuery({ field: 'dateTo', value: moment(dateTo).format('DD/MM/YYYY') }));
   }, [dateTo]);
 
   const onChangeStart = (date) => setDateFrom(date);
   const onChangeEnd = (date) => setDateTo(date);
 
   return (
-    <div className='flex p-4'>
-      <span>From:</span>
-      <span className='inline-block'>
-        <DatePicker
-          selected={dateFrom}
-          onChange={onChangeStart}
-        />
-      </span>
-      <span>To:</span>
-      <span className='inline-block'>
-        <DatePicker
-          selected={dateTo}
-          onChange={onChangeEnd}
-        />
-      </span>
+    <div className='md:flex flex-col md:flex-row py-2'>
+      <DateRangeItem label={'From:'} selected={dateFrom} onChange={onChangeStart} />
+      <DateRangeItem label={'To:'} selected={dateTo} onChange={onChangeEnd} />
 
     </div>
+  )
+}
+
+const DateRangeItem = ({ label, selected, onChange }) => {
+  return (
+    <span className='flex justify-center'>
+      <span className='p-3 w-1/5'>{label}</span>
+      <DatePicker
+        className={rangeInputClasses}
+        selected={selected}
+        onChange={onChange}
+      />
+    </span>
   )
 }
 

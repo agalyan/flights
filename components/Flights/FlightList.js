@@ -12,10 +12,10 @@ const FlightList = () => {
   const renderFlight = flight => (<FlightItem key={flight.id} data={flight} />);
 
   return (
-    <div className='divide-y'>
+    <div className='divide-y h-full'>
       { isLoading ?
-        <div className='p-20 text-xl text-center'>
-          <FontAwesomeIcon icon={faSpinner} color="grey" size='3x' spin />
+        <div className='flex flex-col h-full justify-center text-center text-xl'>
+          <FontAwesomeIcon className='block m-auto' icon={faSpinner} color="grey" size='3x' spin />
         </div> :
         <React.Fragment>
           {flights.length > 0 ? flights.map(renderFlight) : <EmptyList />}
