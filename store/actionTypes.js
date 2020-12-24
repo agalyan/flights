@@ -1,0 +1,6 @@
+export const REQUEST_FLIGHTS = 'REQUEST_FLIGHTS';
+export const SUCCESS_FLIGHTS = 'SUCCESS_FLIGHTS';
+export const FAIL_FLIGHTS = 'FAIL_FLIGHTS';
+
+export const ALTER_QUERY = 'ALTER_QUERY';
+

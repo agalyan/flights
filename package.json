@@ -1,0 +1,33 @@
+{
+  "name": "flights",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "1.2.32",
+    "@fortawesome/free-solid-svg-icons": "5.15.1",
+    "@fortawesome/react-fontawesome": "0.1.13",
+    "autoprefixer": "^10.1.0",
+    "moment": "^2.29.1",
+    "next": "10.0.3",
+    "postcss": "^8.2.1",
+    "react": "17.0.1",
+    "react-datepicker": "^3.3.0",
+    "react-dates": "^21.8.0",
+    "react-dom": "17.0.1",
+    "react-redux": "7.1.1",
+    "redux": "4.0.4",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "2.3.0",
+    "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {},
+  "jest": {
+    "verbose": true
+  }
+}
